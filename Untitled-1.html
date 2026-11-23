@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qualidade de Vida dos Fumantes</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f1f7f3;
+    color: #244333;
+}
+header {
+    background: #17613f;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+nav {
+    background: #10472e;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 12px;
+    text-decoration: none;
+}
+.banner {
+    text-align: center;
+    padding: 55px 20px;
+    background: #d8eddf;
+}
+section {
+    padding: 35px 8%;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card, .grafico {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    width: 260px;
+    box-shadow: 0 3px 12px #0001;
+}
+.grafico {
+    width: min(360px, 100%);
+}
+.graficos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+footer {
+    background: #10472e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🌿 Vida Saudável</h1>
+<p>Qualidade de Vida dos Fumantes</p>
+</header>
+
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#impactos">Impactos</a>
+<a href="#graficos">Gráficos</a>
+<a href="#beneficios">Benefícios</a>
+</nav>
+
+<div class="banner">
+<h1>Respire uma vida melhor!</h1>
+<p>Conheça os impactos do cigarro na saúde e a importância de abandonar o tabagismo.</p>
+</div>
+
+<section id="sobre">
+<h2>O que é tabagismo?</h2>
+<p>É a dependência causada principalmente pela nicotina, presente nos produtos derivados do tabaco.</p>
+</section>
+
+<section id="impactos">
+<h2>Impactos na saúde</h2>
+<div class="cards">
+<div class="card">🫁<h3>Pulmões</h3><p>Problemas respiratórios.</p></div>
+<div class="card">❤️<h3>Coração</h3><p>Maior risco de doenças cardíacas.</p></div>
+<div class="card">🧠<h3>Mente</h3><p>Dependência e alterações de humor.</p></div>
+</div>
+</section>
+
+<section id="graficos">
+<h2>📊 Gráficos informativos</h2>
+<div class="graficos">
+<div class="grafico">
+<h3>Problemas relacionados</h3>
+<canvas id="pizza"></canvas>
+</div>
+<div class="grafico">
+<h3>Benefícios ao parar</h3>
+<canvas id="barras"></canvas>
+</div>
+</div>
+<p>Os dados dos gráficos são ilustrativos, não representam estatísticas reais.</p>
+</section>
+
+<section id="beneficios">
+<h2>Benefícios de parar de fumar</h2>
+<div class="cards">
+<div class="card">⏱️<h3>20 minutos</h3><p>A frequência cardíaca começa a diminuir.</p></div>
+<div class="card">🌱<h3>12 horas</h3><p>O monóxido de carbono no sangue diminui.</p></div>
+<div class="card">💚<h3>Semanas</h3><p>A circulação e a respiração podem melhorar.</p></div>
+</div>
+</section>
+
+<footer>
+<p>Projeto Educativo – Qualidade de Vida dos Fumantes</p>
+<p>Cuide da sua saúde! 💚</p>
+</footer>
+
+<script>
+new Chart(document.getElementById('pizza'), {
+ type: 'pie',
+ data: {
+  labels: ['Respiratórios','Cardíacos','Câncer','Outros'],
+  datasets: [{
+   data: [30,25,30,15],
+   backgroundColor: ['#278653','#e6ad43','#d85c5c','#6996c5']
+  }]
+ }
+});
+
+new Chart(document.getElementById('barras'), {
+ type: 'bar',
+ data: {
+  labels: ['20 min','12 horas','2 semanas','1 ano'],
+  datasets: [{
+   label: 'Marcos de recuperação',
+   data: [1,2,3,4],
+   backgroundColor: '#278653'
+  }]
+ },
+ options: {
+  scales: { y: { beginAtZero: true } }
+ }
+});
+</script>
+
+</body>
+</html>
